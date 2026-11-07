@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  color: #e6e8f5;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(124, 58, 237, 0.25), transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(37, 99, 235, 0.22), transparent 55%),
+    linear-gradient(180deg, #05060f 0%, #0b1030 100%);
+  background-attachment: fixed;
+}
+
+.portfolio-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.portfolio-header h1 {
+  margin: 0;
+}
+
+.portfolio-header p {
+  margin: 0.5rem 0 0;
+  color: #8b9cff;
+}
+
+/* Grid: as many columns as fit, each at least 260px wide */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: min(1100px, calc(100% - 2rem));
+  margin: 1.5rem auto 3rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 20, 45, 0.72);
+  border: 1px solid rgba(148, 163, 255, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 24px rgba(139, 156, 255, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.project-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.project-body h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #8b9cff;
+}
+
+.project-body p {
+  margin: 0;
+  line-height: 1.5;
+  color: #a5acc8;
+}
